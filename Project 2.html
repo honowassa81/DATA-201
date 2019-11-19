@@ -16097,6 +16097,55 @@ Warnings:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#scatterplot of predicted values and residuals </span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y_predicted</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">-</span> <span class="n">y_predicted</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[87]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.collections.PathCollection at 0x13da4934eb8&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 <div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -16220,7 +16269,7 @@ Warnings:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><p>The simple linear regression model equation: crime = 13.12(legacy) + 65.57 explained only 35.4% of the variation in the observations despite the model was meaningful, whereas, the multiple regression model crime = 0.97(murder) + 1.01(legacy) + 0.99(robbery)+ 1.00(assault) + 0.18, which was statistically significant, explained 100% of the variation in the observations. Since there is a statistically significant, with correlations more than 80%, we can state that there is a strong relationship between a violent crime and murder, robbery and assault. However, with correlation = 59 %, the violent crime is a quite bite correlate to legacy.</p>
+<h1 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h1><p>The simple linear regression model equation: crime = 13.12(legacy) + 65.57 explained only 35.4% of the variation in the observations despite the model was meaningful, whereas, the multiple regression model crime = 0.97(murder) + 1.01(legacy) + 0.99(robbery)+ 1.00(assault) + 0.18, which was statistically significant, explained 100% of the variation in the observations. There is a statistically significant with a strong relationship between a violent crime and murder, robbery and assault. Also, there is a quite bite correlation between the violent crime and legacy.</p>
 
 </div>
 </div>
